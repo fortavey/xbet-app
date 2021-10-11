@@ -8,6 +8,8 @@ import SettingsScreen from './src/screens/SettingsScreen'
 import THEME from './src/data/colors'
 import { LangState } from './src/context/lang/LangState'
 import HeaderRight from './src/components/HeaderRight'
+import Question1Screen from './src/screens/Question1Screen'
+import Question2Screen from './src/screens/Question2Screen'
 
 const Stack = createNativeStackNavigator()
 
@@ -41,6 +43,20 @@ export default function App() {
             options={{ headerShown: false }}
           />
           <Stack.Screen name="Settings" component={SettingsScreen} />
+          <Stack.Screen
+            name="Question1"
+            component={Question1Screen}
+            options={({ navigation, route }) => ({
+              headerRight: () => <HeaderRight navigation={navigation} />,
+            })}
+          />
+          <Stack.Screen
+            name="Question2"
+            component={Question2Screen}
+            options={({ navigation, route }) => ({
+              headerRight: () => <HeaderRight navigation={navigation} />,
+            })}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </LangState>

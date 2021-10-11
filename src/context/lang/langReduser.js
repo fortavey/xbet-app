@@ -1,9 +1,11 @@
-import { CHANGE_LANG, FETCH_LANG } from '../types'
+import { CHANGE_LANG, CHANGE_QUESTIONS } from '../types'
 
 export const langReducer = (state, action) => {
   switch (action.type) {
     case CHANGE_LANG:
-      return { lang: action.lang }
+      return { ...state, lang: action.lang }
+    case CHANGE_QUESTIONS:
+      return { ...state, questions: action.questions }
     default:
       return state
   }

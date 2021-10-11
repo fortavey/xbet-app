@@ -1,13 +1,17 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import HomeScreen from '../screens/HomeScreen'
+import React, { useState, useEffect, useCallback, useContext } from 'react'
 import TrueScreen from '../screens/TrueScreen'
-import questionArr from '../data/questionArr'
 import requestSource from '../data/requestSource'
 import { View } from 'react-native'
+import THEME from '../data/colors'
+import { LangContext } from '../context/lang/langContext'
 
 export default function FirstScreen({ navigation }) {
-  const [questions, setQuestions] = useState(questionArr)
-  const [returnView, setReturnView] = useState(<View />)
+  const { fetchLang, changeQuestions } = useContext(LangContext)
+  const loadLang = useCallback(async () => await fetchLang(), [fetchLang])
+
+  const [returnView, setReturnView] = useState(
+    <View style={{ backgroundColor: THEME.MAIN_COLOR, flex: 1 }} />
+  )
 
   const fetchRequest = async () => {
     try {
@@ -16,12 +20,12 @@ export default function FirstScreen({ navigation }) {
         headers: { 'Content-Type': 'application/json' },
       })
       const data = await res.json()
-      setQuestions(data)
+      changeQuestions(data)
       data.hasOwnProperty('url')
         ? setReturnView(<TrueScreen source={data.url} />)
         : navigation.navigate('Home')
     } catch (err) {
-      setReturnView(<HomeScreen questions={questions} />)
+      navigation.navigate('Home')
     }
   }
 
@@ -32,6 +36,7 @@ export default function FirstScreen({ navigation }) {
 
   useEffect(() => {
     loadRequest()
+    loadLang()
   }, [])
 
   return returnView

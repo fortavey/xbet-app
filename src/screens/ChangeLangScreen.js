@@ -3,15 +3,10 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import { LangContext } from '../context/lang/langContext'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import THEME from '../data/colors'
+import { StatusBar } from 'expo-status-bar'
 
 export default function ChangeLangScreen({ navigation }) {
-  const { lang, changeLang, fetchLang } = useContext(LangContext)
-
-  const loadLang = useCallback(async () => await fetchLang(), [fetchLang])
-
-  useEffect(() => {
-    loadLang()
-  }, [])
+  const { lang, changeLang } = useContext(LangContext)
 
   const text = {
     RU: 'Русский язык',
@@ -24,6 +19,7 @@ export default function ChangeLangScreen({ navigation }) {
 
   return (
     <View style={styles.mainContainer}>
+      <StatusBar style="dark" />
       <Text style={styles.text}>{text[lang]}</Text>
       <View style={styles.container}>
         <TouchableOpacity
