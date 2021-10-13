@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import {
   StyleSheet,
   View,
@@ -10,9 +10,10 @@ import {
 import { LangContext } from '../context/lang/langContext'
 import { StatusBar } from 'expo-status-bar'
 import THEME from '../data/colors'
+import { getRandomObject } from '../functions/getRandomObject'
 
 export default function HomeScreen({ navigation }) {
-  const { lang } = useContext(LangContext)
+  const { lang, questions } = useContext(LangContext)
 
   const title = {
     RU: 'Главная',
@@ -40,51 +41,35 @@ export default function HomeScreen({ navigation }) {
     })
   }, [navigation, lang])
 
+  const oneIcon = (type, title) => (
+    <TouchableOpacity
+      style={styles.item}
+      onPress={() =>
+        navigation.navigate('Question1', {
+          obj: getRandomObject(questions.questions[type]),
+          result: 0,
+          page: 0,
+        })
+      }
+    >
+      <Image
+        style={styles.icon}
+        resizeMode="contain"
+        source={require('../../assets/iconMain.png')}
+      />
+      <Text style={styles.itemText}>{title[lang]}</Text>
+    </TouchableOpacity>
+  )
+
   return (
     <View style={styles.mainContainer}>
       <StatusBar style="light" backgroundColor={THEME.MAIN_COLOR} />
       <ImageBackground source={image} resizeMode="cover" style={styles.imageBg}>
         <View style={styles.twoIcons}>
-          <TouchableOpacity
-            style={styles.item}
-            onPress={() =>
-              navigation.navigate('Question1', { type: 'players' })
-            }
-          >
-            <Image
-              style={styles.icon}
-              resizeMode="contain"
-              source={require('../../assets/iconMain.png')}
-            />
-            <Text style={styles.itemText}>{players[lang]}</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.item}
-            onPress={() =>
-              navigation.navigate('Question1', { type: 'championships' })
-            }
-          >
-            <Image
-              style={styles.icon}
-              resizeMode="contain"
-              source={require('../../assets/iconMain.png')}
-            />
-            <Text style={styles.itemText}>{championships[lang]}</Text>
-          </TouchableOpacity>
+          {oneIcon('players', players)}
+          {oneIcon('championships', championships)}
         </View>
-        <View style={styles.oneIcon}>
-          <TouchableOpacity
-            style={styles.item}
-            onPress={() => navigation.navigate('Question1', { type: 'clubs' })}
-          >
-            <Image
-              style={styles.icon}
-              resizeMode="contain"
-              source={require('../../assets/iconMain.png')}
-            />
-            <Text style={styles.itemText}>{teams[lang]}</Text>
-          </TouchableOpacity>
-        </View>
+        <View style={styles.oneIcon}>{oneIcon('clubs', teams)}</View>
       </ImageBackground>
     </View>
   )

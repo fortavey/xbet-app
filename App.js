@@ -10,6 +10,8 @@ import { LangState } from './src/context/lang/LangState'
 import HeaderRight from './src/components/HeaderRight'
 import Question1Screen from './src/screens/Question1Screen'
 import Question2Screen from './src/screens/Question2Screen'
+import Question3Screen from './src/screens/Question3Screen'
+import ResultScreen from './src/screens/ResultScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -53,6 +55,20 @@ export default function App() {
           <Stack.Screen
             name="Question2"
             component={Question2Screen}
+            options={({ navigation, route }) => ({
+              headerRight: () => <HeaderRight navigation={navigation} />,
+            })}
+          />
+          <Stack.Screen
+            name="Question3"
+            component={Question3Screen}
+            options={({ navigation, route }) => ({
+              headerRight: () => <HeaderRight navigation={navigation} />,
+            })}
+          />
+          <Stack.Screen
+            name="Result"
+            component={ResultScreen}
             options={({ navigation, route }) => ({
               headerRight: () => <HeaderRight navigation={navigation} />,
             })}

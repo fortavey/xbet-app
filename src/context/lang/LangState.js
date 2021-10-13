@@ -14,7 +14,6 @@ export const LangState = ({ children }) => {
 
   const changeLang = (lang) => dispatch({ type: CHANGE_LANG, lang })
   const changeQuestions = (questions) => {
-    console.log('dispatch')
     dispatch({ type: CHANGE_QUESTIONS, questions })
   }
 
