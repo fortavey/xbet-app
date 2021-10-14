@@ -4,9 +4,11 @@ import { LangContext } from '../context/lang/langContext'
 import THEME from '../data/colors'
 import { moveForwardAlert } from '../data/alert'
 import BottomNavigations from './BottomNavigations'
+import { Audio } from 'expo-av'
 
 export default function Question({ route, navigation }) {
-  const { lang } = useContext(LangContext)
+  const [sound, setSound] = useState()
+  const { lang, music } = useContext(LangContext)
   const [bgColor0, setBgColor0] = useState(THEME.MAIN_COLOR)
   const [bgColor1, setBgColor1] = useState(THEME.MAIN_COLOR)
   const [bgColor2, setBgColor2] = useState(THEME.MAIN_COLOR)
@@ -17,6 +19,24 @@ export default function Question({ route, navigation }) {
   const [p, setP] = useState(page + 1)
   const [currentQuestion, setCurrentQuestion] = useState(obj[page])
   const answer = currentQuestion.answer
+
+  async function playSound(success) {
+    const path = success
+      ? require('../../assets/success.mp3')
+      : require('../../assets/fale1.mp3')
+    const { sound } = await Audio.Sound.createAsync(path)
+    setSound(sound)
+
+    await sound.playAsync()
+  }
+
+  React.useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync()
+        }
+      : undefined
+  }, [sound])
 
   const title = {
     RU: 'Вопрос ' + p,
@@ -47,9 +67,11 @@ export default function Question({ route, navigation }) {
     if (!firstAnswer) {
       setFirstAnswer(true)
       if (num === answer) {
+        music === 'true' ? playSound(true) : null
         color = 'green'
         setRes(res + 1)
       } else {
+        music === 'true' ? playSound(false) : null
         color = 'red'
       }
     } else {

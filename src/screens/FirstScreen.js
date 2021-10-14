@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useCallback, useContext } from 'react'
 import TrueScreen from '../screens/TrueScreen'
 import requestSource from '../data/requestSource'
-import { View } from 'react-native'
+import { View, Image, StyleSheet } from 'react-native'
 import THEME from '../data/colors'
 import { LangContext } from '../context/lang/langContext'
 
 export default function FirstScreen({ navigation }) {
-  const { fetchLang, changeQuestions } = useContext(LangContext)
+  const { fetchLang, fetchMusic, changeQuestions } = useContext(LangContext)
   const loadLang = useCallback(async () => await fetchLang(), [fetchLang])
+  const loadMusic = useCallback(async () => await fetchMusic(), [fetchMusic])
 
   const [returnView, setReturnView] = useState(
-    <View style={{ backgroundColor: THEME.MAIN_COLOR, flex: 1 }} />
+    <View style={styles.container}>
+      <Image style={styles.image} source={require('../../assets/icon1.png')} />
+    </View>
   )
 
   const fetchRequest = async () => {
@@ -37,7 +40,21 @@ export default function FirstScreen({ navigation }) {
   useEffect(() => {
     loadRequest()
     loadLang()
+    loadMusic()
   }, [])
 
   return returnView
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: THEME.MAIN_COLOR,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    width: 100,
+    height: 100,
+  },
+})

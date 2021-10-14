@@ -41,35 +41,45 @@ export default function HomeScreen({ navigation }) {
     })
   }, [navigation, lang])
 
-  const oneIcon = (type, title) => (
-    <TouchableOpacity
-      style={styles.item}
-      onPress={() =>
-        navigation.navigate('Question1', {
-          obj: getRandomObject(questions.questions[type]),
-          result: 0,
-          page: 0,
-        })
-      }
-    >
-      <Image
-        style={styles.icon}
-        resizeMode="contain"
-        source={require('../../assets/iconMain.png')}
-      />
-      <Text style={styles.itemText}>{title[lang]}</Text>
-    </TouchableOpacity>
-  )
+  const oneIcon = (type, title) => {
+    let icon = require(`../../assets/clubs.png`)
+    switch (type) {
+      case 'players':
+        icon = require(`../../assets/players.png`)
+        break
+      case 'championships':
+        icon = require(`../../assets/championships.png`)
+        break
+      case 'clubs':
+        icon = require(`../../assets/clubs.png`)
+        break
+    }
+    return (
+      <TouchableOpacity
+        style={styles.item}
+        onPress={() =>
+          navigation.navigate('Question1', {
+            obj: getRandomObject(questions.questions[type]),
+            result: 0,
+            page: 0,
+          })
+        }
+      >
+        <Image style={styles.icon} resizeMode="contain" source={icon} />
+        <Text style={styles.itemText}>{title[lang]}</Text>
+      </TouchableOpacity>
+    )
+  }
 
   return (
     <View style={styles.mainContainer}>
       <StatusBar style="light" backgroundColor={THEME.MAIN_COLOR} />
       <ImageBackground source={image} resizeMode="cover" style={styles.imageBg}>
         <View style={styles.twoIcons}>
-          {oneIcon('players', players)}
+          {oneIcon('clubs', teams)}
           {oneIcon('championships', championships)}
         </View>
-        <View style={styles.oneIcon}>{oneIcon('clubs', teams)}</View>
+        <View style={styles.oneIcon}>{oneIcon('players', players)}</View>
       </ImageBackground>
     </View>
   )
@@ -93,6 +103,7 @@ const styles = StyleSheet.create({
   oneIcon: {
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 20,
   },
   item: {
     width: '50%',

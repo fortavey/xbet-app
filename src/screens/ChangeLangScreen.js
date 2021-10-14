@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import { LangContext } from '../context/lang/langContext'
 import AsyncStorage from '@react-native-async-storage/async-storage'

@@ -1,13 +1,17 @@
 import { StatusBar } from 'expo-status-bar'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { WebView } from 'react-native-webview'
 import * as Progress from 'react-native-progress'
 import THEME from '../data/colors'
+import { LangContext } from '../context/lang/langContext'
 
-export default function TrueScreen({ source }) {
+export default function WebViewScreen({ route, navigation }) {
+  const { lang } = useContext(LangContext)
+  const { source, title } = route.params
   const [progress, setProgress] = useState(0)
   const [isLoaded, setLoaded] = useState(false)
+  const [progressColor, setProgressColor] = useState(THEME.MAIN_COLOR)
 
   const webWiew = React.createElement(WebView, {
     style: { flex: 1, backgroundColor: THEME.MAIN_COLOR },
@@ -18,7 +22,16 @@ export default function TrueScreen({ source }) {
     onLoadEnd: () => {
       setLoaded(true)
     },
+    onError: (err) => {
+      navigation.navigate('Home')
+    },
   })
+
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerTitle: title[lang],
+    })
+  }, [navigation, lang])
 
   return (
     <>
@@ -27,10 +40,8 @@ export default function TrueScreen({ source }) {
       {!isLoaded ? (
         <Progress.Bar
           progress={progress}
-          color={'#fff'}
-          unfilledColor={THEME.MAIN_COLOR}
+          color={progressColor}
           width={null}
-          borderWidth={0}
           borderRadius={0}
         />
       ) : null}
@@ -42,6 +53,5 @@ export default function TrueScreen({ source }) {
 const styles = StyleSheet.create({
   topLine: {
     backgroundColor: THEME.MAIN_COLOR,
-    height: 30,
   },
 })

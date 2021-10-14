@@ -8,10 +8,12 @@ import SettingsScreen from './src/screens/SettingsScreen'
 import THEME from './src/data/colors'
 import { LangState } from './src/context/lang/LangState'
 import HeaderRight from './src/components/HeaderRight'
+import HeaderRightToHome from './src/components/HeaderRightToHome'
 import Question1Screen from './src/screens/Question1Screen'
 import Question2Screen from './src/screens/Question2Screen'
 import Question3Screen from './src/screens/Question3Screen'
 import ResultScreen from './src/screens/ResultScreen'
+import WebViewScreen from './src/screens/WebViewScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -44,7 +46,13 @@ export default function App() {
             component={ChangeLangScreen}
             options={{ headerShown: false }}
           />
-          <Stack.Screen name="Settings" component={SettingsScreen} />
+          <Stack.Screen
+            name="Settings"
+            component={SettingsScreen}
+            options={({ navigation, route }) => ({
+              headerRight: () => <HeaderRight navigation={navigation} />,
+            })}
+          />
           <Stack.Screen
             name="Question1"
             component={Question1Screen}
@@ -71,6 +79,13 @@ export default function App() {
             component={ResultScreen}
             options={({ navigation, route }) => ({
               headerRight: () => <HeaderRight navigation={navigation} />,
+            })}
+          />
+          <Stack.Screen
+            name="WebView"
+            component={WebViewScreen}
+            options={({ navigation, route }) => ({
+              headerRight: () => <HeaderRightToHome navigation={navigation} />,
             })}
           />
         </Stack.Navigator>

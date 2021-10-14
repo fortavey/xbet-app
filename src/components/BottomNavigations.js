@@ -19,18 +19,20 @@ export default function BottomNavigations({ navigation, moveForward }) {
           <AntDesign name="home" size={24} color="#fff" />
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={{
-          ...styles.bottomNavigationItem,
-          borderColor: '#fff',
-          borderLeftWidth: 2,
-        }}
-        onPress={() => moveForward()}
-      >
-        <Text style={styles.bottomNavigationItemText}>
-          <Foundation name="next" size={24} color="#fff" />
-        </Text>
-      </TouchableOpacity>
+      {moveForward ? (
+        <TouchableOpacity
+          style={{
+            ...styles.bottomNavigationItem,
+            borderColor: '#fff',
+            borderLeftWidth: 2,
+          }}
+          onPress={() => moveForward()}
+        >
+          <Text style={styles.bottomNavigationItemText}>
+            <Foundation name="next" size={24} color="#fff" />
+          </Text>
+        </TouchableOpacity>
+      ) : null}
     </View>
   )
 }
@@ -40,6 +42,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
+    marginTop: 'auto',
   },
   bottomNavigationItem: {
     width: '49%',
