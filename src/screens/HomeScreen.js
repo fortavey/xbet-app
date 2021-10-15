@@ -32,7 +32,7 @@ export default function HomeScreen({ navigation }) {
     EN: 'Championships',
   }
   const mainTitle = {
-    RU: 'Учавствуй и побеждай в викторине XВetApp',
+    RU: 'Участвуй и побеждай в викторине XВetApp',
     EN: 'Join and win the quiz XBetApp',
   }
 

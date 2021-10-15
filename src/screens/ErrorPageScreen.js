@@ -4,6 +4,10 @@ import { Text, View } from 'react-native'
 
 export default function ErrorPageScreen({ navigation }) {
   const { lang } = useContext(LangContext)
+  const title = {
+    RU: 'Ошибка соединения',
+    EN: 'Connection error',
+  }
   const text = {
     RU: 'Ошибка интернет соединения',
     EN: 'Internet connection error',
