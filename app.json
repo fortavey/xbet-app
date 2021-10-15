@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "XBET APP",
+    "name": "XBetApp",
     "slug": "xbet-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -26,7 +26,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#153453"
       },
-      "package": "ru.fortavey.regionmobileapp",
+      "package": "com.xbetapp1.xbetapp",
       "versionCode": 1,
       "permissions": []
     },

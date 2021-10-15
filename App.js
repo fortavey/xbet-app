@@ -14,6 +14,7 @@ import Question2Screen from './src/screens/Question2Screen'
 import Question3Screen from './src/screens/Question3Screen'
 import ResultScreen from './src/screens/ResultScreen'
 import WebViewScreen from './src/screens/WebViewScreen'
+import ErrorPageScreen from './src/screens/ErrorPageScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -84,6 +85,13 @@ export default function App() {
           <Stack.Screen
             name="WebView"
             component={WebViewScreen}
+            options={({ navigation, route }) => ({
+              headerRight: () => <HeaderRightToHome navigation={navigation} />,
+            })}
+          />
+          <Stack.Screen
+            name="ErrorPage"
+            component={ErrorPageScreen}
             options={({ navigation, route }) => ({
               headerRight: () => <HeaderRightToHome navigation={navigation} />,
             })}

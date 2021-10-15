@@ -31,6 +31,10 @@ export default function HomeScreen({ navigation }) {
     RU: 'Чемпионаты',
     EN: 'Championships',
   }
+  const mainTitle = {
+    RU: 'Учавствуй и побеждай в викторине XВetApp',
+    EN: 'Join and win the quiz XBetApp',
+  }
 
   const image = require('../../assets/imageHome.jpg')
 
@@ -75,6 +79,9 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.mainContainer}>
       <StatusBar style="light" backgroundColor={THEME.MAIN_COLOR} />
       <ImageBackground source={image} resizeMode="cover" style={styles.imageBg}>
+        <View style={{ marginBottom: 40 }}>
+          <Text style={styles.mainTitle}>{mainTitle[lang]}</Text>
+        </View>
         <View style={styles.twoIcons}>
           {oneIcon('clubs', teams)}
           {oneIcon('championships', championships)}
@@ -96,6 +103,11 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  mainTitle: {
+    fontSize: 22,
+    color: '#fff',
+    textAlign: 'center',
   },
   twoIcons: {
     flexDirection: 'row',

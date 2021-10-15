@@ -8,7 +8,6 @@ export default function HeaderRight({ navigation }) {
       <FontAwesome
         name="language"
         size={24}
-        color="black"
         onPress={() => navigation.navigate('ChangeLang')}
         color="#fff"
         style={styles.item}

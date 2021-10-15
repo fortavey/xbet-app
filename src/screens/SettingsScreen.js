@@ -43,6 +43,7 @@ export default function SettingsScreen({ navigation }) {
   React.useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle: text.title[lang],
+      headerBackTitleVisible: false,
     })
   }, [navigation, lang])
 

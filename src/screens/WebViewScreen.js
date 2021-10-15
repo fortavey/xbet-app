@@ -23,13 +23,14 @@ export default function WebViewScreen({ route, navigation }) {
       setLoaded(true)
     },
     onError: (err) => {
-      navigation.navigate('Home')
+      navigation.navigate('ErrorPage')
     },
   })
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle: title[lang],
+      headerBackTitleVisible: false,
     })
   }, [navigation, lang])
 

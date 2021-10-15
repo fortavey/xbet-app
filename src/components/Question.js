@@ -102,7 +102,7 @@ export default function Question({ route, navigation }) {
       headerTitle: title[lang],
       headerBackVisible: false,
     })
-  }, [navigation, lang])
+  }, [navigation, lang, title])
 
   const oneAnswer = (n, bgColor) => (
     <TouchableOpacity
