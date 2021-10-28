@@ -2,7 +2,7 @@ import React from 'react'
 import { AntDesign } from '@expo/vector-icons'
 import { View, StyleSheet } from 'react-native'
 
-export default function HeaderRight({ navigation }) {
+export default function HeaderRightToHome({ navigation }) {
   return (
     <View style={styles.container}>
       <AntDesign

@@ -41,12 +41,33 @@ export default function Question3Screen({ route, navigation }) {
       resultText = text.badText[lang]
       break
     case 1:
-      resultText = text.notBadText[lang]
+      resultText = text.badText[lang]
       break
     case 2:
-      resultText = text.goodText[lang]
+      resultText = text.notBadText[lang]
       break
     case 3:
+      resultText = text.notBadText[lang]
+      break
+    case 4:
+      resultText = text.notBadText[lang]
+      break
+    case 5:
+      resultText = text.goodText[lang]
+      break
+    case 6:
+      resultText = text.goodText[lang]
+      break
+    case 7:
+      resultText = text.goodText[lang]
+      break
+    case 8:
+      resultText = text.excellentText[lang]
+      break
+    case 9:
+      resultText = text.excellentText[lang]
+      break
+    case 10:
       resultText = text.excellentText[lang]
       break
   }
@@ -67,15 +88,6 @@ export default function Question3Screen({ route, navigation }) {
         source={require('../../assets/championships.png')}
       />
       <View style={styles.stars}>
-        {result ? (
-          <MaterialCommunityIcons name="star" size={50} color="gold" />
-        ) : (
-          <MaterialCommunityIcons
-            name="star-outline"
-            size={50}
-            color="silver"
-          />
-        )}
         {result > 1 ? (
           <MaterialCommunityIcons name="star" size={50} color="gold" />
         ) : (
@@ -85,7 +97,16 @@ export default function Question3Screen({ route, navigation }) {
             color="silver"
           />
         )}
-        {result > 2 ? (
+        {result > 4 ? (
+          <MaterialCommunityIcons name="star" size={50} color="gold" />
+        ) : (
+          <MaterialCommunityIcons
+            name="star-outline"
+            size={50}
+            color="silver"
+          />
+        )}
+        {result > 7 ? (
           <MaterialCommunityIcons name="star" size={50} color="gold" />
         ) : (
           <MaterialCommunityIcons

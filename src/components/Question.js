@@ -5,6 +5,7 @@ import THEME from '../data/colors'
 import { moveForwardAlert } from '../data/alert'
 import BottomNavigations from './BottomNavigations'
 import { Audio } from 'expo-av'
+import { questionsCounter } from '../data/questionsCounter'
 
 export default function Question({ route, navigation }) {
   const [sound, setSound] = useState()
@@ -43,7 +44,7 @@ export default function Question({ route, navigation }) {
     EN: 'Question ' + p,
   }
   const next = p + 1
-  const nextScreen = next <= 3 ? 'Question' + next : 'Result'
+  const nextScreen = next <= questionsCounter ? 'Question' + next : 'Result'
 
   const moveForward = () => {
     if (firstAnswer) {

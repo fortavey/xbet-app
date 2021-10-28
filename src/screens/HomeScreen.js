@@ -36,6 +36,11 @@ export default function HomeScreen({ navigation }) {
     EN: 'Join and win the quiz XBetApp',
   }
 
+  const emblemTitle = {
+    RU: 'Угадай эмблему',
+    EN: 'Guess the emblem',
+  }
+
   const image = require('../../assets/imageHome.jpg')
 
   React.useLayoutEffect(() => {
@@ -87,6 +92,12 @@ export default function HomeScreen({ navigation }) {
           {oneIcon('championships', championships)}
         </View>
         <View style={styles.oneIcon}>{oneIcon('players', players)}</View>
+        <TouchableOpacity
+          style={styles.bottomContainer}
+          onPress={() => navigation.navigate('Emblem')}
+        >
+          <Text style={styles.bottomContainerText}>{emblemTitle[lang]}</Text>
+        </TouchableOpacity>
       </ImageBackground>
     </View>
   )
@@ -108,6 +119,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     color: '#fff',
     textAlign: 'center',
+    marginTop: 50,
   },
   twoIcons: {
     flexDirection: 'row',
@@ -134,5 +146,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.3)',
     paddingLeft: 5,
     paddingRight: 5,
+  },
+  bottomContainer: {
+    width: '95%',
+    borderRadius: 10,
+    marginBottom: 30,
+    height: 90,
+    backgroundColor: THEME.MAIN_COLOR,
+    marginTop: 'auto',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  bottomContainerText: {
+    color: '#fff',
+    fontSize: 20,
   },
 })
