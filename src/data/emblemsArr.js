@@ -84,4 +84,74 @@ export default [
     RU: 'вест хэм',
     EN: 'west ham',
   },
+  {
+    img: require('../../assets/real_madrid.png'),
+    RU: 'реал мадрид',
+    EN: 'real madrid',
+  },
+  {
+    img: require('../../assets/barselona.png'),
+    RU: 'барселона',
+    EN: 'barcelona',
+  },
+  {
+    img: require('../../assets/atletico.png'),
+    RU: 'атлетико мадрид',
+    EN: 'atletico madrid',
+  },
+  {
+    img: require('../../assets/valencia.png'),
+    RU: 'валенсия',
+    EN: 'valencia',
+  },
+  {
+    img: require('../../assets/deportivo.png'),
+    RU: 'депортиво',
+    EN: 'deportivo',
+  },
+  {
+    img: require('../../assets/sevilla.png'),
+    RU: 'севилья',
+    EN: 'sevilla',
+  },
+  {
+    img: require('../../assets/sporting_gihon.png'),
+    RU: 'спортинг хихон',
+    EN: 'sporting gijon',
+  },
+  {
+    img: require('../../assets/villareal.png'),
+    RU: 'вильярреал',
+    EN: 'villarreal',
+  },
+  {
+    img: require('../../assets/juventus.png'),
+    RU: 'ювентус',
+    EN: 'juventus',
+  },
+  {
+    img: require('../../assets/inter.png'),
+    RU: 'интер',
+    EN: 'inter',
+  },
+  {
+    img: require('../../assets/milan.png'),
+    RU: 'милан',
+    EN: 'milan',
+  },
+  {
+    img: require('../../assets/roma.png'),
+    RU: 'roma',
+    EN: 'рома',
+  },
+  {
+    img: require('../../assets/napoli.png'),
+    RU: 'napoli',
+    EN: 'наполи',
+  },
+  {
+    img: require('../../assets/fiorentina.png'),
+    RU: 'fiorentina',
+    EN: 'фиорентина',
+  },
 ]

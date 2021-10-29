@@ -3,255 +3,427 @@ export default {
     clubs: [
       {
         RU: {
-          question: 'В какой футбольной команде играет Неймар?',
-          answers: ['Ливерпуль', 'ПСЖ', 'Ростов', 'Барселона'],
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2020 года',
+          answers: ['Германия', 'Португалия', 'Франция', 'Италия'],
         },
         EN: {
-          question: 'Which football team does Neymar play for?',
-          answers: ['Liverpool', 'PSG', 'Rostov', 'Barcelona'],
-        },
-        answer: 1,
-      },
-      {
-        RU: {
-          question: 'Кто является тренером футбольной команды Реал Мадрид?',
-          answers: [
-            'Хосеп Гвардиола',
-            'Артем Дзюба',
-            'Рональд Куман',
-            'Карло Анчелотти',
-          ],
-        },
-        EN: {
-          question: 'Who is the coach of the Real Madrid football team?',
-          answers: [
-            'Josep Guardiola',
-            'Artem Dzyubaa',
-            'Ronald Koeman',
-            'Carlo Ancelotti',
-          ],
+          question: 'Which national team won the 2020 European Championship?',
+          answers: ['Germany', 'Portugal', 'France', 'Italy'],
         },
         answer: 3,
       },
       {
         RU: {
-          question: 'Символом какой футбольной команды является Орёл?',
-          answers: ['Динамо', 'Барселона', 'Бенфика', 'Штутгард'],
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2016 года',
+          answers: ['Германия', 'Португалия', 'Франция', 'Испания'],
         },
         EN: {
-          question: "Which football team's symbol is the Eagle?",
-          answers: ['Dynamo', 'Barcelona', 'Benfica', 'Stuttgart'],
+          question: 'Which national team won the 2016 European Championship?',
+          answers: ['Germany', 'Portugal', 'France', 'Spain'],
+        },
+        answer: 1,
+      },
+      {
+        RU: {
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2012 года',
+          answers: ['Германия', 'Испания', 'Бельгия', 'Италия'],
+        },
+        EN: {
+          question: 'Which national team won the 2012 European Championship?',
+          answers: ['Germany', 'Spain', 'Belgium', 'Italy'],
+        },
+        answer: 1,
+      },
+      {
+        RU: {
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2008 года',
+          answers: ['Германия', 'Франция', 'Бельгия', 'Испания'],
+        },
+        EN: {
+          question: 'Which national team won the 2008 European Championship?',
+          answers: ['Germany', 'France', 'Belgium', 'Spain'],
+        },
+        answer: 3,
+      },
+      {
+        RU: {
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2004 года',
+          answers: ['Германия', 'Франция', 'Греция', 'Голландия'],
+        },
+        EN: {
+          question: 'Which national team won the 2004 European Championship?',
+          answers: ['Germany', 'France', 'Greece', 'Holland'],
         },
         answer: 2,
       },
       {
         RU: {
-          question: 'Где играет Месси?',
-          answers: ['Барселона', 'ПСЖ', 'Манчестер Юнайтед', 'Ливерпуль'],
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2000 года',
+          answers: ['Германия', 'Франция', 'Бельгия', 'Голландия'],
         },
         EN: {
-          question: 'Where does Messi play?',
-          answers: ['Barcelona', 'PSG', 'Manchester United', 'Liverpool'],
+          question: 'Which national team won the 2000 European Championship?',
+          answers: ['Germany', 'France', 'Belgium', 'Holland'],
         },
         answer: 1,
       },
       {
         RU: {
-          question: 'Самая Популярная футбольная команда в Германии?',
-          answers: [
-            'Бавария Мюнхен',
-            'РБ Лейпциг',
-            'Боруссия Дортмунд',
-            'Штутгард',
-          ],
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 1996 года',
+          answers: ['Германия', 'Дания', 'Бельгия', 'Голландия'],
         },
         EN: {
-          question: 'The most popular football team in Germany?',
-          answers: [
-            'Bayern Munich',
-            'RB Leipzig',
-            'Borussia Dortmund',
-            'Stuttgart',
-          ],
+          question: 'Which national team won the 1996 European Championship?',
+          answers: ['Germany', 'Denmark', 'Belgium', 'Holland'],
         },
         answer: 0,
       },
       {
         RU: {
-          question: 'В какой футбольной команде играет Кристиано Роналдо?',
-          answers: ['Манчестер Юнайтед', 'Реал Мадрид', 'Ювентус', 'Спортинг'],
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 1992 года',
+          answers: ['Германия', 'Дания', 'Бельгия', 'Голландия'],
         },
         EN: {
-          question: 'What football team does Cristiano Ronaldo play for?',
-          answers: ['Manchester United', 'Real Madrid', 'Juventus', 'Sporting'],
-        },
-        answer: 0,
-      },
-      {
-        RU: {
-          question: 'Самая Популярная футбольная команда в Португалии?',
-          answers: ['Бенфика', 'Порту', 'Спортинг', 'Брага'],
-        },
-        EN: {
-          question: 'The most popular football team in Portugal?',
-          answers: ['Benfica', 'Porto', 'Sporting', 'Braga'],
+          question: 'Which national team won the 1992 European Championship?',
+          answers: ['Germany', 'Denmark', 'Belgium', 'Holland'],
         },
         answer: 1,
+      },
+      {
+        RU: {
+          question:
+            'Какая национальная сборная победила на чемпионате мира 2018 года',
+          answers: ['Бразилия', 'Франция', 'Германия', 'Испания'],
+        },
+        EN: {
+          question: 'Which national team won the 2018 World Cup?',
+          answers: ['Brazil', 'France', 'Germany', 'Spain'],
+        },
+        answer: 1,
+      },
+      {
+        RU: {
+          question:
+            'Какая национальная сборная победила на чемпионате мира 2014 года',
+          answers: ['Бразилия', 'Франция', 'Германия', 'Испания'],
+        },
+        EN: {
+          question: 'Which national team won the 2014 World Cup?',
+          answers: ['Brazil', 'France', 'Germany', 'Spain'],
+        },
+        answer: 2,
       },
     ],
     players: [
       {
         RU: {
-          question: 'В какой футбольной команде играет Неймар?',
-          answers: ['Ливерпуль', 'ПСЖ', 'Ростов', 'Барселона'],
-        },
-        EN: {
-          question: 'Which football team does Neymar play for?',
-          answers: ['Liverpool', 'PSG', 'Rostov', 'Barcelona'],
-        },
-        answer: 1,
-      },
-      {
-        RU: {
-          question: 'Самый дорогой футболист 2021 года?',
+          question: 'Кто стал лучшим бомбардиром чемпионата Европы 2008 года',
           answers: [
-            'Андрес Иньеста',
             'Криштиану Роналду',
-            'Лионель Месси',
-            'Неймар',
+            'Бастиан Швайнштайгер',
+            'Давид Вилья',
+            'Фернандо Торрес',
           ],
         },
         EN: {
-          question: 'The most expensive footballer of 2021?',
+          question:
+            'Who became the top scorer of the 2008 European Championship?',
           answers: [
-            'Andres Iniesta',
             'Cristiano Ronaldo',
-            'Lionel Messi',
-            'Neimar',
-          ],
-        },
-        answer: 1,
-      },
-      {
-        RU: {
-          question: 'Кто лучший футболист в 2020 году?',
-          answers: [
-            'Серхио Рамос',
-            'Криштиану Роналду',
-            'Роберт Левандовски',
-            'Лео Месси',
-          ],
-        },
-        EN: {
-          question: 'Who is the best football player in 2020?',
-          answers: [
-            'Sergio Ramos',
-            'Cristiano Ronaldo',
-            'Robert Lewandowski',
-            'Leo Messi',
+            'Bastian Schweinsteiger',
+            'David Villa',
+            'Fernando Torres',
           ],
         },
         answer: 2,
       },
       {
         RU: {
-          question: 'Сколько лет Кристиано Роналду?',
-          answers: ['36', '35', '40', '29'],
+          question: 'В каком году завершил футбольную карьеру Зинедин Зидан',
+          answers: ['2010', '2006', '2004', '2002'],
         },
         EN: {
-          question: 'How old is Cristiano Ronaldo?',
-          answers: ['36', '35', '40', '29'],
-        },
-        answer: 0,
-      },
-      {
-        RU: {
-          question: 'Где играет Месси?',
-          answers: ['Барселона', 'ПСЖ', 'Манчестер Юнайтед', 'Ливерпуль'],
-        },
-        EN: {
-          question: 'Where does Messi play?',
-          answers: ['Barcelona', 'PSG', 'Manchester United', 'Liverpool'],
+          question:
+            'In what year did Zinedine Zidane finish his football career?',
+          answers: ['2010', '2006', '2004', '2002'],
         },
         answer: 1,
       },
       {
         RU: {
-          question: 'В какой футбольной команде играет Кристиано Роналдо?',
-          answers: ['Манчестер Юнайтед', 'Реал Мадрид', 'Ювентус', 'Спортинг'],
+          question:
+            'Сколько голов за карьеру забил легендарный бразильский вратарь Рожерио Сени',
+          answers: ['15', '48', '67', '132'],
         },
         EN: {
-          question: 'What football team does Cristiano Ronaldo play for?',
-          answers: ['Manchester United', 'Real Madrid', 'Juventus', 'Sporting'],
+          question:
+            'How many goals has the legendary Brazilian goalkeeper Rogerio Seni scored during his career?',
+          answers: ['15', '48', '67', '132'],
         },
-        answer: 0,
+        answer: 3,
+      },
+      {
+        RU: {
+          question: 'За какой клуб играл известный певец Хулио Иглесиас?',
+          answers: ['Атлетико Мадрид', 'Сарагоса', 'Реал Мадрид', 'Валенсия'],
+        },
+        EN: {
+          question: 'Which club did the famous singer Julio Iglesias play for?',
+          answers: ['Atletico Madrid', 'Zaragoza', 'Real Madrid', 'Valencia'],
+        },
+        answer: 2,
+      },
+      {
+        RU: {
+          question: 'Кто из игроков испанец?',
+          answers: [
+            'Криштиану Роналду',
+            'Лионель Месси',
+            'Икер Касильяс',
+            'Мауро Камаронези',
+          ],
+        },
+        EN: {
+          question: 'Which of the players is Spanish?',
+          answers: [
+            'Cristiano Ronaldo',
+            'Lionel Messi',
+            'Iker Casillas',
+            'Mauro Camoranesi',
+          ],
+        },
+        answer: 2,
+      },
+      {
+        RU: {
+          question: 'Кто лучший игрок 2018 года?',
+          answers: [
+            'Криштиану Роналду',
+            'Лионель Месси',
+            'Неймар',
+            'Лука Модрич',
+          ],
+        },
+        EN: {
+          question: 'Who is the best player of 2018?',
+          answers: [
+            'Cristiano Ronaldo',
+            'Lionel Messi',
+            'Neymar',
+            'Luka Modric',
+          ],
+        },
+        answer: 3,
+      },
+      {
+        RU: {
+          question:
+            'Кто традиционно считается лучшим игроком за всю историю футбола?',
+          answers: [
+            'Криштиану Роналду',
+            'Лионель Месси',
+            'Пеле',
+            'Диего Марадонна',
+          ],
+        },
+        EN: {
+          question:
+            'Who is traditionally considered the best player in the history of football?',
+          answers: [
+            'Cristiano Ronaldo',
+            'Lionel Messi',
+            'Pele',
+            'Diego Maradona',
+          ],
+        },
+        answer: 2,
+      },
+      {
+        RU: {
+          question:
+            'Кто был капитаном футбольной сборной, ставшей чемпионом Олимпийских игр 1956 года?',
+          answers: ['Лев Яшин', 'Игорь Нетто', 'Сантьяго Бернабеу', 'Пеле'],
+        },
+        EN: {
+          question:
+            'Who was the captain of the football team that became the champion of the 1956 Olympic Games?',
+          answers: ['Lev Yashin', 'Igor Netto', 'Santiago Bernabeu ', 'Pele'],
+        },
+        answer: 1,
+      },
+      {
+        RU: {
+          question: 'Кто является атвором самого сильного удара в футболе?',
+          answers: [
+            'Дэвид Бекхэм',
+            'Халк',
+            'Роберто Карлос',
+            'Лукас Подольски',
+          ],
+        },
+        EN: {
+          question: 'Who is the owner of the strongest kick in football?',
+          answers: [
+            'David Beckham',
+            'Hulk',
+            'Roberto Carlos',
+            'Lukas Podolski',
+          ],
+        },
+        answer: 1,
+      },
+      {
+        RU: {
+          question:
+            'Как называется самая почетная персональная награда для футболиста?',
+          answers: [
+            'Статуэтка чемпиона',
+            'Золотой мяч',
+            'Кубок чемпиона',
+            'Золотая бутса',
+          ],
+        },
+        EN: {
+          question:
+            'What is the name of the most honorable personal award for a football player?',
+          answers: [
+            'Champion Statuette',
+            'Golden Ball',
+            "Champion 's Cup",
+            'Golden Boot',
+          ],
+        },
+        answer: 1,
       },
     ],
     championships: [
       {
         RU: {
-          question: 'Кто стал Чемпионом мира по футболу в 2010?',
-          answers: ['Голландия', 'Россия', 'Германия', 'Испания'],
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2020 года',
+          answers: ['Германия', 'Португалия', 'Франция', 'Италия'],
         },
         EN: {
-          question: 'Who became the World Football Champion in 2010?',
-          answers: ['Holland', 'Russia', 'Germany', 'Spain'],
+          question: 'Which national team won the 2020 European Championship?',
+          answers: ['Germany', 'Portugal', 'France', 'Italy'],
         },
         answer: 3,
       },
       {
         RU: {
-          question: 'Какой самый престижный кубок по футболу?',
-          answers: [
-            'Кубок мира ФИФА',
-            'Кубок Европы',
-            'Кубок России по футболу',
-            'Лига чемпионов UEFA',
-          ],
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2016 года',
+          answers: ['Германия', 'Португалия', 'Франция', 'Испания'],
         },
         EN: {
-          question: 'What is the most prestigious football cup?',
-          answers: [
-            'FIFA World Cup',
-            'Euro Cup',
-            'Russian Football Cup',
-            'UEFA Champions League',
-          ],
-        },
-        answer: 0,
-      },
-      {
-        RU: {
-          question: 'Какая футбольная команда самая дорогая?',
-          answers: ['Барселона', 'Спартак', 'Реал', 'Ливерпуль'],
-        },
-        EN: {
-          question: 'Which football team is the most expensive?',
-          answers: ['Barcelona', 'Spartak', 'Real Madrid', 'Liverpool'],
-        },
-        answer: 2,
-      },
-      {
-        RU: {
-          question: 'Кто стал Чемпионом Европы по футболу 2021?',
-          answers: ['Голландия', 'Италия', 'Германия', 'Испания'],
-        },
-        EN: {
-          question: 'Who became the European Football Champion in 2021?',
-          answers: ['Holland', 'Italy', 'Germany', 'Spain'],
+          question: 'Which national team won the 2016 European Championship?',
+          answers: ['Germany', 'Portugal', 'France', 'Spain'],
         },
         answer: 1,
       },
       {
         RU: {
-          question: 'Кто стал Чемпионом мира по футболу в 2018?',
-          answers: ['Испания', 'Россия', 'Бразилия', 'Франция'],
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2012 года',
+          answers: ['Германия', 'Испания', 'Бельгия', 'Италия'],
         },
         EN: {
-          question: 'Who became the World Football Champion in 2018?',
-          answers: ['Spain', 'Russia', 'Brazil', 'France'],
+          question: 'Which national team won the 2012 European Championship?',
+          answers: ['Germany', 'Spain', 'Belgium', 'Italy'],
+        },
+        answer: 1,
+      },
+      {
+        RU: {
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2008 года',
+          answers: ['Германия', 'Франция', 'Бельгия', 'Испания'],
+        },
+        EN: {
+          question: 'Which national team won the 2008 European Championship?',
+          answers: ['Germany', 'France', 'Belgium', 'Spain'],
         },
         answer: 3,
+      },
+      {
+        RU: {
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2004 года',
+          answers: ['Германия', 'Франция', 'Греция', 'Голландия'],
+        },
+        EN: {
+          question: 'Which national team won the 2004 European Championship?',
+          answers: ['Germany', 'France', 'Greece', 'Holland'],
+        },
+        answer: 2,
+      },
+      {
+        RU: {
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 2000 года',
+          answers: ['Германия', 'Франция', 'Бельгия', 'Голландия'],
+        },
+        EN: {
+          question: 'Which national team won the 2000 European Championship?',
+          answers: ['Germany', 'France', 'Belgium', 'Holland'],
+        },
+        answer: 1,
+      },
+      {
+        RU: {
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 1996 года',
+          answers: ['Германия', 'Дания', 'Бельгия', 'Голландия'],
+        },
+        EN: {
+          question: 'Which national team won the 1996 European Championship?',
+          answers: ['Germany', 'Denmark', 'Belgium', 'Holland'],
+        },
+        answer: 0,
+      },
+      {
+        RU: {
+          question:
+            'Какая сборная стала победитетем чемпионата Европы 1992 года',
+          answers: ['Германия', 'Дания', 'Бельгия', 'Голландия'],
+        },
+        EN: {
+          question: 'Which national team won the 1992 European Championship?',
+          answers: ['Germany', 'Denmark', 'Belgium', 'Holland'],
+        },
+        answer: 1,
+      },
+      {
+        RU: {
+          question:
+            'Какая национальная сборная победила на чемпионате мира 2018 года',
+          answers: ['Бразилия', 'Франция', 'Германия', 'Испания'],
+        },
+        EN: {
+          question: 'Which national team won the 2018 World Cup?',
+          answers: ['Brazil', 'France', 'Germany', 'Spain'],
+        },
+        answer: 1,
+      },
+      {
+        RU: {
+          question:
+            'Какая национальная сборная победила на чемпионате мира 2014 года',
+          answers: ['Бразилия', 'Франция', 'Германия', 'Испания'],
+        },
+        EN: {
+          question: 'Which national team won the 2014 World Cup?',
+          answers: ['Brazil', 'France', 'Germany', 'Spain'],
+        },
+        answer: 2,
       },
     ],
   },

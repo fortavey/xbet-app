@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native'
+import { StackActions } from '@react-navigation/native'
 import { LangContext } from '../context/lang/langContext'
 import THEME from '../data/colors'
 import emblemsArr from '../data/emblemsArr'
@@ -48,6 +49,7 @@ export default function EmblemScreen({ navigation }) {
   React.useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle: title[lang],
+      headerBackTitleVisible: false,
     })
   }, [navigation, lang])
 
@@ -164,7 +166,13 @@ export default function EmblemScreen({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.bottomNavigationItem}
-          onPress={() => navigation.push('Emblem')}
+          onPress={() =>
+            navigation.dispatch(
+              StackActions.replace('Emblem', {
+                user: 'jane',
+              })
+            )
+          }
         >
           <Text>
             <FontAwesome name="refresh" size={24} color="white" />
